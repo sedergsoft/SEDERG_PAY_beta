@@ -1,0 +1,17 @@
+<?php
+
+// Database configuration for Yii2
+
+return [
+    'class' => 'yii\\db\\Connection',
+    'dsn' => 'mysql:host=' . getenv('DB_HOST') . ';port=' . getenv('DB_PORT') . ';dbname=' . getenv('DB_NAME'),
+    'username' => getenv('DB_USER'),
+    'password' => getenv('DB_PASSWORD'),
+    'charset' => 'utf8mb4',
+    'tablePrefix' => 'tbl_',
+    'enableLogging' => false,
+    'enableProfiling' => false,
+    'attributes' => [
+        PDO::ATTR_STRINGIFY_FETCHES => false,
+    ],
+];
